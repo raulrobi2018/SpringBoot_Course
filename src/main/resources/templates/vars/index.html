@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text=${title}></title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" />
+</head>
+<body>
+	<h1 th:text=${title} class="title"></h1>
+	
+	<h2 class="sub-title">Styling statics elements</h2>
+
+	<ul>
+		<li><a th:href="@{/vars/string/} + 'Hello Raul!'">Send
+				Greeting</a></li>
+		<li><a th:href="@{/vars/string/} + 'Hello World!'">Send
+				another greeting</a></li>
+		<li><a
+			th:href="@{/vars/string/} + 'Hello World! This is the number /' + 35">Send
+				greeting and a number</a></li>
+	</ul>
+
+	<img alt="Image" th:src="@{/images/profile5.png}">
+</body>
+</html>
